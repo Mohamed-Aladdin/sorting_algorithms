@@ -23,6 +23,10 @@ void swap_dlist_nodes(listint_t *n1, listint_t *n2);
 void swap_ints(int *n1, int *n2);
 int partition_array(int *array, int min, int max, size_t size);
 void lomuto_quicksort(int *array, int min, int max, size_t size);
+int get_higher(int *array, int size);
+void merge_arr(int *arr, int *buf, size_t front, size_t mid,
+		size_t back);
+void merge_sort_rec(int *arr, int *buf, size_t front, size_t back);
 
 /* Tasks Functions */
 void print_array(const int *array, size_t size);
@@ -31,5 +35,11 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
 
 #endif /* SORT_H */
