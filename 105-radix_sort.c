@@ -1,5 +1,18 @@
 #include "sort.h"
 
+int get_higher(int *arr, int size)
+{
+	int max, i;
+
+	for (max = arr[0], i = 1; i < size; i++)
+	{
+		if (arr[i] > max)
+			max = arr[i];
+	}
+
+	return (max);
+}
+
 /**
  * radix_sort_count - sorts digits.
  * @arr: The given array.
@@ -16,7 +29,7 @@ void radix_sort_count(int *arr, size_t size, int uni, int *buf)
 	size_t i;
 
 	for (i = 0; i < size; i++)
-		c[(array[i] / sig) % 10] += 1;
+		c[(arr[i] / uni) % 10] += 1;
 
 	for (i = 0; i < 10; i++)
 		c[i] += c[i - 1];
@@ -51,7 +64,7 @@ void radix_sort(int *array, size_t size)
 	if (!buf)
 		return;
 
-	max = get_max(array, size);
+	max = get_higher(array, size);
 	for (uni = 1; max / uni > 0; uni *= 10)
 	{
 		radix_sort_count(array, size, uni, buf);
