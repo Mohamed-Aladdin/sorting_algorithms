@@ -1,5 +1,13 @@
 #include "sort.h"
 
+/**
+ * get_higher - gets the max of digits.
+ * @arr: The given array.
+ * @size: The given array size.
+ *
+ * Return: Int.
+ */
+
 int get_higher(int *arr, int size)
 {
 	int max, i;
