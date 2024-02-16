@@ -14,12 +14,12 @@ void selection_sort(int *array, size_t size)
 	size_t i, j, k;
 	int tmp;
 
-	if i(!size || !array || size < 2)
+	if (!size || !array || size < 2)
 		return;
 
 	for (i = 1; i < size; i++)
 	{
-		for (j = size - 1; k = i + 1; j > i; j--)
+		for (j = size - 1, k = i + 1; j > i; j--)
 		{
 			if (array[j] < array[k])
 				k = j;
