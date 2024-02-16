@@ -39,11 +39,11 @@ void selection_sort(int *array, size_t size)
 		tmp = array + i;
 
 		for (j = i + 1; j < size; j++)
-			tmp = (array[j] < *tmp) ? (array + j) : min;
+			tmp = (array[j] < *tmp) ? (array + j) : tmp;
 
 		if ((array + i) != tmp)
 		{
-			swap_ints(array + i, tmp)
+			swap_ints(array + i, tmp);
 			print_array(array, size);
 		}
 	}
